@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+#root{
+    width: 95%;
+    margin-inline:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+

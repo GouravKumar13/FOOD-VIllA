@@ -1,0 +1,32 @@
+
+.wrapper{
+    display: flex;
+    max-height: 150px;
+    width: 100%;
+    gap: 20rem;
+    background-color: rgb(255, 255, 255);
+    
+    
+
+    .logo{
+        img{
+            height: 100%;
+        
+        }
+    }
+
+    .nav-items{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+
+        li{
+        list-style: none;
+        font-size: 20px;
+        cursor: pointer;
+        margin-inline: 30px;
+
+        }
+    }
+}
