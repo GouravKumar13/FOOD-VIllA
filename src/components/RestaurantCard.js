@@ -1,5 +1,6 @@
 import React from "react";
 import "./RestaurantCard.scss";
+import { IMG_CDN_URL } from "../config";
 
 
 const RestaurantCard = ({
@@ -9,15 +10,12 @@ const RestaurantCard = ({
   avgRating,
   slaString,
   costForTwoString,
+ dis
+  
 }) => {
   return (
     <div className="restaurantCards">
-      <img
-        src={
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
-          cloudinaryImageId
-        }
-      />
+      <img src={IMG_CDN_URL + cloudinaryImageId} />
       <h3 className="title">{name}</h3>
       <h4 className="cuisines">{cuisines.join(", ")}</h4>
       <div className="ratings-dilivery-costForTwo">
@@ -25,6 +23,7 @@ const RestaurantCard = ({
         <span>{slaString}</span>
         <span>{costForTwoString}</span>
       </div>
+  {/* <h6>FLAT150 off | Use FLATDEAL</h6> */}
       <hr />
     </div>
   );

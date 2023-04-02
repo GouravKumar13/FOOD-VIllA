@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import  "./Header.scss";
 
 
 
 function Header() {
+
+  const LogedIn = ()=>(
+   true
+  )
+  const [isLogedIn , setIsLogedIn] = useState("false")
   return (
     <div className="wrapper">
       <div className="logo">
@@ -13,9 +18,10 @@ function Header() {
         <li>Search</li>
         <li>Offers</li>
         <li>Help</li>
-        <li>Sign in</li>
         <li>cart</li>
+        <li>{isLogedIn ?<button onClick={()=>{setIsLogedIn(false)}}>LOG-OUT</button>:<button onClick={()=>{setIsLogedIn(true)}}>LOG-IN</button>}</li>
       </div>
+
     </div>
   );
 }
