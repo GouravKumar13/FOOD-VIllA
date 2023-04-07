@@ -4,6 +4,9 @@
     flex-wrap: wrap;
     justify-content: center;
     cursor: pointer;
+    overflow:hiddens;
     
-    
+    a{
+       all: unset;
+    }
 }

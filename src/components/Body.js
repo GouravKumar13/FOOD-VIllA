@@ -5,6 +5,7 @@ import "./Body.scss";
 import { useState, useEffect } from "react";
 
 import DoorDashFavorite from "./Shimmer";
+import { Link } from "react-router-dom";
 
 function filterData(searchText, allRestaurants) {
   const filterData = allRestaurants.filter((restaurant) =>
@@ -34,7 +35,7 @@ const Body = () => {
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     setFilterRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
-  // if(!allRestaurants) return null ;
+  if(!allRestaurants) return null ;
 
   return allRestaurants.length === 0 ? (
     <div className="restaurant-list">
@@ -69,7 +70,9 @@ const Body = () => {
          
           filterRestaurants.map((restaurant) => {
             return (
-              restaurant.length===0 ? (<DoorDashFavorite />):(<RestaurantCard {...restaurant.data} key={restaurant.data.id} />)
+              <Link to={"restaurant/"+restaurant.data.id} key={restaurant.data.id} >
+            <RestaurantCard {...restaurant.data}  />
+            </Link>
             );
           })
         )}

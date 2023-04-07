@@ -10,7 +10,7 @@ const RestaurantCard = ({
   avgRating,
   slaString,
   costForTwoString,
- dis
+ 
   
 }) => {
   return (
