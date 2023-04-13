@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import About from "./components/About";
+import Contact from "./components/Contact";
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import Body from "./components/Body";
 import RestaurantCard from "./components/RestaurantCard";
@@ -22,6 +23,7 @@ export const AppRoute = createBrowserRouter([
     children: [
       { path: "/", element: <Body /> },
       { path: "/about", element: <About /> },
+      { path: "/contact", element: <Contact/> },
       { path: "/restaurant/:id", element: <RestaurantDetails /> },
     ],
   },

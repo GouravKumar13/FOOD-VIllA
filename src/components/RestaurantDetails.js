@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { json, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import DoorDashFavorite from "./Shimmer";
 import "./RestaurantDetails.scss";
 import { IMG_CDN_URL } from "../config";
@@ -9,7 +9,7 @@ const RestaurantDetails = () => {
   const [AllRestaurantDetails, setRestaurantDetails] = useState([]);
   const [Restaurant, setRestaurant] = useState(null);
   const [discount, setDiscount] = useState();
-  const [catogries, setCatogries] = useState([]);
+  const [catogries, setCatogries] = useState({});
 
   useEffect(() => {
     getRestaurantData();
@@ -38,15 +38,15 @@ const RestaurantDetails = () => {
     setCatogries(recommendedCatogrie);
   }
 
-  if (!AllRestaurantDetails ) return null;
-  if(!catogries) return null;
+  if (!AllRestaurantDetails) return null;
+  console.log(useState())
   return !Restaurant ? (
     <DoorDashFavorite />
   ) : (
     <div className="wrapperDetails">
       <div className="head">
-        <h2>{Restaurant.name}</h2>
-        <p>{Restaurant.cuisines}</p>
+        <h2>{Restaurant?.name}</h2>
+        <p>{Restaurant?.cuisines}</p>
         <div className="location-distance">
           <span className="location">{Restaurant?.areaName}, </span>
           <span className="distance">
@@ -63,32 +63,29 @@ const RestaurantDetails = () => {
           {discount.map((info) => {
             return (
               <div className="discount-info">
-                <div className="Flat-off">{info.header}</div>
-                <span className="couponCode">{info.couponCode}|</span>
-                <span className="min-amount">{info.description}</span>
+                <div className="Flat-off">{info?.header}</div>
+                <span className="couponCode">{info?.couponCode}|</span>
+                <span className="min-amount">{info?.description}</span>
               </div>
             );
           })}
         </div>
         <div className="catogries">
           <h2>
-            {catogries.title}(<span>{catogries?.itemCards?.length}</span>)
+            {catogries?.title}(<span>{catogries?.itemCards?.length}</span>)
           </h2>
-          {Object.values(catogries.itemCards).map((dish) => {
+
+          {Object.values(catogries?.itemCards).map((dish) => {
             return (
               <div className="main">
-              <div className="left" key={dish?.card?.info?.id}>
-               
-                <div className="dish">{dish?.card?.info?.name}</div>
-                <span className="cost">{dish?.card?.info?.price / 100}</span>
-                <p className="discription">{dish?.card?.info?.description}</p>
-              </div>
-              <div className="right">
-                <img src={IMG_CDN_URL+dish.card.info.imageId} />
-              </div>
-              
-             
-              
+                <div className="left" key={dish?.card?.info?.id}>
+                  <div className="dish">{dish?.card?.info?.name}</div>
+                  <span className="cost">{dish?.card?.info?.price / 100}</span>
+                  <p className="discription">{dish?.card?.info?.description}</p>
+                </div>
+                <div className="right">
+                  <img src={IMG_CDN_URL + dish?.card?.info?.imageId} />
+                </div>
               </div>
             );
           })}
