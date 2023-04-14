@@ -6,13 +6,10 @@ import { useState, useEffect } from "react";
 
 import DoorDashFavorite from "./Shimmer";
 import { Link } from "react-router-dom";
+import { filterData } from "../utils/helper";
+import useOnline from "../utils/useOnline";
 
-function filterData(searchText, allRestaurants) {
-  const filterData = allRestaurants.filter((restaurant) =>
-    restaurant?.data?.name?.toLowerCase()?.includes(searchText.toLowerCase())
-  );
-  return filterData;
-}
+
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -35,7 +32,15 @@ const Body = () => {
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     setFilterRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
+  const isOnline = useOnline();
+  if(!isOnline){
+    //add a image and make this page more attractive using updraw.co
+    return <h1>🔴 you are offline please connect to the internet</h1>
+  }
+
   if(!allRestaurants) return null ;
+
+ 
 
   return allRestaurants.length === 0 ? (
     <div className="restaurant-list">

@@ -20,11 +20,12 @@ export const AppRoute = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
+    children: [  
       { path: "/", element: <Body /> },
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Contact/> },
       { path: "/restaurant/:id", element: <RestaurantDetails /> },
     ],
+  
   },
 ]);

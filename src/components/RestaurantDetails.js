@@ -6,7 +6,7 @@ import { IMG_CDN_URL } from "../config";
 
 const RestaurantDetails = () => {
   const { id } = useParams();
-  const [AllRestaurantDetails, setRestaurantDetails] = useState([]);
+  // const [AllRestaurantDetails, setRestaurantDetails] = useState([]);
   const [Restaurant, setRestaurant] = useState(null);
   const [discount, setDiscount] = useState();
   const [catogries, setCatogries] = useState({});
@@ -32,14 +32,14 @@ const RestaurantDetails = () => {
     const recommendedCatogrie =
       AllData[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
-    setRestaurantDetails(AllData);
+    // setRestaurantDetails(AllData);
     setRestaurant(AllData[0].card.card.info);
     setDiscount(DiscountDetails);
     setCatogries(recommendedCatogrie);
   }
 
-  if (!AllRestaurantDetails) return null;
-  console.log(useState())
+  // if (!AllRestaurantDetails) return null;
+
   return !Restaurant ? (
     <DoorDashFavorite />
   ) : (
