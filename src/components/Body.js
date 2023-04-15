@@ -1,6 +1,6 @@
 import React from "react";
 import RestaurantCard from "./RestaurantCard";
-import "./Body.scss";
+// import "./Body.scss";
 
 import { useState, useEffect } from "react";
 
@@ -48,7 +48,7 @@ const Body = () => {
     </div>
   ) : (
     <>
-      <div className="SearchContainer">
+      <div className="flex justify-center">
         <input
           type="text"
           className="search-input"
@@ -68,7 +68,7 @@ const Body = () => {
           Search
         </button>
       </div>
-      <div className="restaurant-list">
+      <div className="restaurant-list flex flex-wrap justify-center gap-5">
         {filterRestaurants.length === 0 ? (
           <h1>This Restaurant is not found</h1>
         ) : (

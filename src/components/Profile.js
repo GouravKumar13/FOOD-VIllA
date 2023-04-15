@@ -1,5 +1,5 @@
 import useProfile from "../utils/useProfile";
-import "./Profile.scss"
+// import "./Profile.scss"
 const Profile = () => {
   userdata = useProfile();
 
