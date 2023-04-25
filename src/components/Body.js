@@ -51,7 +51,7 @@ const Body = () => {
       <div className="flex justify-center">
         <input
           type="text"
-          className="search-input"
+          className="search-input "
           placeholder="Search..."
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}

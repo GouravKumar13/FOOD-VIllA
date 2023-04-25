@@ -3,8 +3,21 @@ import {  useParams } from "react-router-dom";
 import DoorDashFavorite from "./Shimmer";
 // import "./RestaurantDetails.scss";
 import { IMG_CDN_URL } from "../config";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/CartSlice";
 
 const RestaurantDetails = () => {
+
+  const dispatcher = useDispatch();
+
+  const handleAddItems = (dish) => {
+    dispatcher(addItem(dish))
+  }
+
+
+
+
+
   const { id } = useParams();
   // const [AllRestaurantDetails, setRestaurantDetails] = useState([]);
   const [Restaurant, setRestaurant] = useState(null);
@@ -37,7 +50,7 @@ const RestaurantDetails = () => {
     setDiscount(DiscountDetails);
     setCatogries(recommendedCatogrie);
   }
-
+ 
   // if (!AllRestaurantDetails) return null;
 
   return !Restaurant ? (
@@ -77,14 +90,15 @@ const RestaurantDetails = () => {
 
           {Object.values(catogries?.itemCards).map((dish) => {
             return (
-              <div className="flex gap-28 pb-4 border-b-2 border-dotted  border-y-gray-400 ">
-                <div className="  w-2/5" key={dish?.card?.info?.id}>
-                  <div className="dish">{dish?.card?.info?.name}</div>
-                  <span className="cost">{dish?.card?.info?.price / 100}</span>
-                  <p className="discription">{dish?.card?.info?.description}</p>
+              <div className="overflow-hidden flex gap-9 mb-1 border-b-2 border-dotted max-h-[300px]  border-y-gray-400 " key={dish?.card?.info?.id}>
+                <div className="  w-[50%]" >
+                  <div className=" mb-5 text-lg font-semibold text-gray-700">{dish?.card?.info?.name}</div>
+                  <span className="font-semibold text-gray-900">₹{dish?.card?.info?.price / 100}</span>
+                  <p className="text-left text-xs text-gray-700">{dish?.card?.info?.description}</p>
                 </div>
-                <div className="flex justify-end w-2/5">
-                  <img  className=" w-52" src={IMG_CDN_URL + dish?.card?.info?.imageId} />
+                <div className=" flex flex-col items-end w-[50%] ">
+                  <img  className=" w-[220px] p-4 relative" src={IMG_CDN_URL + dish?.card?.info?.imageId} />
+                  <span className=" relative w-[18%] text-center bottom-12 right-14  bg-green-500 cursor-pointer" onClick={()=>handleAddItems(dish)}>Add To Cart</span>
                 </div>
               </div>
             );
