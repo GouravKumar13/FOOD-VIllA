@@ -12,3 +12,5 @@ root.render(
     <RouterProvider router={AppRoute} />
   </React.StrictMode>
 );
+
+export default main

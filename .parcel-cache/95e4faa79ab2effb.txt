@@ -1,4 +1,4 @@
-14031
+14033
 97X:\react\New folder\reactcodes\node_modules\@babel\preset-env\lib\polyfills\babel-polyfill.js.map133271587043908820 0
 98X:\react\New folder\reactcodes\node_modules\@babel\types\lib\modifications\removeProperties.js.map133271587047193509 0
 92X:\react\New folder\reactcodes\node_modules\sucrase\dist\types\transformers\Transformer.d.ts133260233168927473 0
@@ -29,7 +29,7 @@
 65X:\react\New folder\reactcodes\node_modules\xmlchars\package.json133271461286343714 0
 49X:\react\New folder\reactcodes\node_modules\immer133268021126735095 1
 102X:\react\New folder\reactcodes\node_modules\@reduxjs\toolkit\dist\query\defaultSerializeQueryArgs.d.ts133268021136945189 0
-69X:\react\New folder\reactcodes\src\components\__tests_\Header.test.js133271852158184199 0
+69X:\react\New folder\reactcodes\src\components\__tests_\Header.test.js133271890690996885 0
 80X:\react\New folder\reactcodes\node_modules\istanbul-lib-coverage\lib\percent.js133271453491722146 0
 54X:\react\New folder\reactcodes\node_modules\aria-query133271453163545597 1
 84X:\react\New folder\reactcodes\node_modules\@babel\core\node_modules\.bin\semver.cmd133240970695336337 0
@@ -55,7 +55,7 @@
 41X:\react\New folder\reactcodes\.postcssrc133260251583650530 0
 76X:\react\New folder\reactcodes\node_modules\@sinclair\typebox\value\equal.js133271453495916497 0
 83X:\react\New folder\reactcodes\node_modules\cssstyle\lib\properties\borderBottom.js133271461286883757 0
-35X:\react\New folder\reactcodes\dist133271851128708374 1
+35X:\react\New folder\reactcodes\dist133271894714431066 1
 52X:\react\New folder\reactcodes\node_modules\svgo\lib133238623270739332 1
 59X:\react\New folder\reactcodes\node_modules\@jest\transform133271453493072098 1
 66X:\react\New folder\reactcodes\node_modules\parent-module\index.js133238623266585959 0
@@ -66,7 +66,7 @@
 89X:\react\New folder\reactcodes\node_modules\regenerate-unicode-properties\LICENSE-MIT.txt133271587052200669 0
 87X:\react\New folder\reactcodes\node_modules\caniuse-lite\data\features\vector-effect.js133238623540366438 0
 68X:\react\New folder\reactcodes\node_modules\yocto-queue\package.json133271453487862129 0
-42X:\react\New folder\reactcodes\src\main.js133250721343707781 0
+42X:\react\New folder\reactcodes\src\main.js133271894691256672 0
 96X:\react\New folder\reactcodes\node_modules\caniuse-lite\data\features\keyboardevent-location.js133238623520492321 0
 39X:\react\New folder\reactcodes\coverage133271574149773020 1
 80X:\react\New folder\reactcodes\node_modules\@jridgewell\resolve-uri\package.json133238623266985896 0
@@ -118,7 +118,7 @@
 98X:\react\New folder\reactcodes\node_modules\dom-accessibility-api\dist\accessible-description.d.ts133271453160445771 0
 48X:\react\New folder\reactcodes\package-lock.json133271805565995657 0
 102X:\react\New folder\reactcodes\node_modules\regenerate-unicode-properties\Script_Extensions\Tagalog.js133271587051462832 0
-43X:\react\New folder\reactcodes\package.json133271805566020754 0
+43X:\react\New folder\reactcodes\package.json133271893943463372 0
 93X:\react\New folder\reactcodes\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\Doxyfile133238623425173567 0
 64X:\react\New folder\reactcodes\node_modules\for-each\.travis.yml133271453156025591 0
 49X:\react\New folder\reactcodes\node_modules\@jest133271453482038708 1
@@ -268,7 +268,7 @@
 87X:\react\New folder\reactcodes\node_modules\sucrase\dist\types\parser\plugins\flow.d.ts133260233167904605 0
 96X:\react\New folder\reactcodes\node_modules\jsdom\lib\jsdom\living\generated\HTMLTableElement.js133271461295716333 0
 75X:\react\New folder\reactcodes\node_modules\caniuse-lite\data\regions\MO.js133238623529151490 0
-49X:\react\New folder\reactcodes\coverage\lcov.info133271850917669367 0
+49X:\react\New folder\reactcodes\coverage\lcov.info133271890802484817 0
 88X:\react\New folder\reactcodes\node_modules\@babel\runtime\helpers\esm\writeOnlyError.js133268021127866052 0
 70X:\react\New folder\reactcodes\node_modules\which-boxed-primitive\test133271453157115629 1
 72X:\react\New folder\reactcodes\node_modules\is-weakmap\.github\workflows133271453158055590 1
@@ -277,7 +277,7 @@
 64X:\react\New folder\reactcodes\node_modules\terser\dist\.gitkeep133238623359885854 0
 90X:\react\New folder\reactcodes\node_modules\react-redux\es\connect\verifySubselectors.d.ts133268021673755645 0
 110X:\react\New folder\reactcodes\node_modules\regenerate-unicode-properties\Binary_Property\Sentence_Terminal.js133271587051054692 0
-55X:\react\New folder\reactcodes\src\components\Header.js133271839126835242 0
+55X:\react\New folder\reactcodes\src\components\Header.js133271890431601335 0
 83X:\react\New folder\reactcodes\node_modules\jest-snapshot\build\SnapshotResolver.js133271453492992121 0
 60X:\react\New folder\reactcodes\node_modules\ws\lib\stream.js133271461286953720 0
 66X:\react\New folder\reactcodes\src\components\__tests_\sum.test.js133271601225381143 0
@@ -2661,7 +2661,7 @@
 72X:\react\New folder\reactcodes\node_modules\object-inspect\test\undef.js133271453159505656 0
 118X:\react\New folder\reactcodes\node_modules\@parcel\package-manager\test\fixtures\has-a-not-yet-installed\package.json133238623595273825 0
 63X:\react\New folder\reactcodes\node_modules\type-fest\base.d.ts133238623267948580 0
-57X:\react\New folder\reactcodes\dist\index.4d6bcbeb.js.map133271851128668398 0
+57X:\react\New folder\reactcodes\dist\index.4d6bcbeb.js.map133271894714421097 0
 89X:\react\New folder\reactcodes\node_modules\@bcoe\v8-coverage\dist\lib\_src\range-tree.ts133271453501041062 0
 80X:\react\New folder\reactcodes\node_modules\@parcel\core\src\summarizeRequest.js133238623619380793 0
 75X:\react\New folder\reactcodes\node_modules\css-tree\lib\syntax\node\Nth.js133238623270874512 0
@@ -3222,7 +3222,7 @@
 81X:\react\New folder\reactcodes\node_modules\@babel\core\lib\transform-file.js.map133271587046136162 0
 77X:\react\New folder\reactcodes\node_modules\tailwindcss\scripts\type-utils.js133260233170172235 0
 82X:\react\New folder\reactcodes\node_modules\sucrase\node_modules\commander\typings133260233156836270 1
-54X:\react\New folder\reactcodes\dist\index.9e4c6fd2.css133271851127658405 0
+54X:\react\New folder\reactcodes\dist\index.9e4c6fd2.css133271894712423615 0
 129X:\react\New folder\reactcodes\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-browser-alias\browser.js133238623383688265 0
 73X:\react\New folder\reactcodes\node_modules\@types\tough-cookie\README.md133271461285193725 0
 94X:\react\New folder\reactcodes\node_modules\aria-query\lib\etc\roles\literal\radiogroupRole.js133271453161695579 0
@@ -3676,7 +3676,7 @@
 110X:\react\New folder\reactcodes\node_modules\react-content-loader\dist\native\__tests__\snapshots.test.d.ts.map133249005545931364 0
 93X:\react\New folder\reactcodes\node_modules\@parcel\transformer-svg\test\parseFuncIRI.test.js133238623556263525 0
 116X:\react\New folder\reactcodes\node_modules\regenerate-unicode-properties\Binary_Property\Changes_When_Titlecased.js133271587043898719 0
-53X:\react\New folder\reactcodes\dist\index.4d6bcbeb.js133271851128558383 0
+53X:\react\New folder\reactcodes\dist\index.4d6bcbeb.js133271894714261167 0
 62X:\react\New folder\reactcodes\node_modules\term-size\index.js133238623354906458 0
 68X:\react\New folder\reactcodes\node_modules\is-date-object\.eslintrc133271453155725611 0
 77X:\react\New folder\reactcodes\node_modules\source-map-js\lib\mapping-list.js133244589876932389 0
@@ -5009,7 +5009,7 @@
 92X:\react\New folder\reactcodes\node_modules\@swc\helpers\lib\_check_private_redeclaration.js133238623602820219 0
 69X:\react\New folder\reactcodes\node_modules\resolve\test\nonstring.js133260233163850779 0
 82X:\react\New folder\reactcodes\node_modules\jiti\dist\plugins\import-meta-env.d.ts133260233161678548 0
-50X:\react\New folder\reactcodes\coverage\clover.xml133271850917719369 0
+50X:\react\New folder\reactcodes\coverage\clover.xml133271890802597590 0
 67X:\react\New folder\reactcodes\node_modules\resolve\test\precedence133260233163232242 1
 90X:\react\New folder\reactcodes\node_modules\regenerate-unicode-properties\Script\Brahmi.js133271587042106163 0
 70X:\react\New folder\reactcodes\node_modules\resolve\test\precedence.js133260233164036450 0
@@ -6278,7 +6278,7 @@
 63X:\react\New folder\reactcodes\node_modules\object-inspect\test133271453159565605 1
 88X:\react\New folder\reactcodes\node_modules\react-redux\es\connect\verifySubselectors.js133268021672695673 0
 98X:\react\New folder\reactcodes\node_modules\jest-leak-detector\node_modules\ansi-styles\index.d.ts133271453490332169 0
-64X:\react\New folder\reactcodes\coverage\lcov-report\prettify.css133271850917529396 0
+64X:\react\New folder\reactcodes\coverage\lcov-report\prettify.css133271890802283320 0
 64X:\react\New folder\reactcodes\node_modules\posthtml-parser\dist133238623354735795 1
 80X:\react\New folder\reactcodes\node_modules\react-redux\es\components\connect.js133268021671526231 0
 83X:\react\New folder\reactcodes\node_modules\electron-to-chromium\full-versions.json133238623383587208 0
@@ -9913,7 +9913,7 @@
 95X:\react\New folder\reactcodes\node_modules\dom-accessibility-api\dist\is-inaccessible.d.ts.map133271453159805592 0
 93X:\react\New folder\reactcodes\node_modules\dom-accessibility-api\dist\is-inaccessible.js.map133271453159845579 0
 90X:\react\New folder\reactcodes\node_modules\dom-accessibility-api\dist\is-inaccessible.mjs133271453160345595 0
-83X:\react\New folder\reactcodes\coverage\lcov-report\components\__tests_\sum.js.html133271850917659390 0
+83X:\react\New folder\reactcodes\coverage\lcov-report\components\__tests_\sum.js.html133271890802454813 0
 94X:\react\New folder\reactcodes\node_modules\dom-accessibility-api\dist\is-inaccessible.mjs.map133271453159865591 0
 80X:\react\New folder\reactcodes\node_modules\dom-accessibility-api\dist\polyfills133271453160655600 1
 84X:\react\New folder\reactcodes\node_modules\dom-accessibility-api\dist\util.d.ts.map133271453160025575 0
@@ -10350,7 +10350,7 @@
 67X:\react\New folder\reactcodes\node_modules\char-regex\package.json133271453489012141 0
 64X:\react\New folder\reactcodes\node_modules\char-regex\README.md133271453489992126 0
 65X:\react\New folder\reactcodes\node_modules\chalk\source\index.js133238623266666370 0
-63X:\react\New folder\reactcodes\coverage\lcov-report\prettify.js133271850917529396 0
+63X:\react\New folder\reactcodes\coverage\lcov-report\prettify.js133271890802364795 0
 64X:\react\New folder\reactcodes\node_modules\chalk\source\util.js133238623267374147 0
 82X:\react\New folder\reactcodes\node_modules\caniuse-lite\dist\unpacker\browsers.js133238623395576331 0
 89X:\react\New folder\reactcodes\node_modules\caniuse-lite\dist\unpacker\browserVersions.js133238623397430666 0
@@ -10773,7 +10773,7 @@
 104X:\react\New folder\reactcodes\node_modules\caniuse-lite\data\features\img-naturalwidth-naturalheight.js133238623480360688 0
 85X:\react\New folder\reactcodes\node_modules\caniuse-lite\data\features\import-maps.js133238623480370712 0
 81X:\react\New folder\reactcodes\node_modules\caniuse-lite\data\features\imports.js133238623480380682 0
-63X:\react\New folder\reactcodes\coverage\lcov-report\favicon.png133271850917509376 0
+63X:\react\New folder\reactcodes\coverage\lcov-report\favicon.png133271890802163282 0
 83X:\react\New folder\reactcodes\node_modules\caniuse-lite\data\features\indexeddb.js133238623480420699 0
 84X:\react\New folder\reactcodes\node_modules\caniuse-lite\data\features\indexeddb2.js133238623480430687 0
 86X:\react\New folder\reactcodes\node_modules\caniuse-lite\data\features\inline-block.js133238623480440680 0
@@ -11045,7 +11045,7 @@
 101X:\react\New folder\reactcodes\node_modules\babel-plugin-polyfill-corejs2\lib\built-in-definitions.js133271587036674217 0
 114X:\react\New folder\reactcodes\node_modules\@parcel\node-resolver-core\test\fixture\packages\source-alias\other.js133238623384332602 0
 86X:\react\New folder\reactcodes\node_modules\babel-plugin-polyfill-corejs2\lib\index.js133271587037567890 0
-73X:\react\New folder\reactcodes\coverage\lcov-report\components\index.html133271850917609448 0
+73X:\react\New folder\reactcodes\coverage\lcov-report\components\index.html133271890802395150 0
 87X:\react\New folder\reactcodes\node_modules\babel-plugin-polyfill-corejs2\esm\index.mjs133271587033443327 0
 73X:\react\New folder\reactcodes\node_modules\babel-plugin-jest-hoist\build133271453490572160 1
 75X:\react\New folder\reactcodes\node_modules\babel-plugin-jest-hoist\LICENSE133271453486362133 0
@@ -12693,6 +12693,7 @@
 72X:\react\New folder\reactcodes\node_modules\@parcel\events\lib\errors.js133238623606595762 0
 70X:\react\New folder\reactcodes\node_modules\@parcel\diagnostic\LICENSE133238623600893293 0
 75X:\react\New folder\reactcodes\node_modules\@parcel\diagnostic\package.json133238623601048460 0
+75X:\react\New folder\reactcodes\coverage\lcov-report\utils\CartSlice.js.html133271890802474800 0
 66X:\react\New folder\reactcodes\node_modules\@parcel\diagnostic\src133238623600943346 1
 82X:\react\New folder\reactcodes\node_modules\@parcel\diagnostic\lib\diagnostic.d.ts133238623601118461 0
 67X:\react\New folder\reactcodes\node_modules\@parcel\core\index.d.ts133238623623000043 0
@@ -13227,7 +13228,7 @@
 82X:\react\New folder\reactcodes\node_modules\@babel\types\lib\utils\shallowEqual.js133271587047837237 0
 86X:\react\New folder\reactcodes\node_modules\@babel\types\lib\utils\shallowEqual.js.map133271587047847245 0
 103X:\react\New folder\reactcodes\node_modules\@babel\types\lib\utils\react\cleanJSXElementLiteralChild.js133271587047787027 0
-77X:\react\New folder\reactcodes\coverage\lcov-report\utils\userContext.js.html133271850917679515 0
+77X:\react\New folder\reactcodes\coverage\lcov-report\utils\userContext.js.html133271890802484817 0
 107X:\react\New folder\reactcodes\node_modules\@babel\types\lib\utils\react\cleanJSXElementLiteralChild.js.map133271587047807248 0
 89X:\react\New folder\reactcodes\node_modules\@babel\types\lib\traverse\traverseFast.js.map133271587047666610 0
 101X:\react\New folder\reactcodes\node_modules\@babel\types\lib\retrievers\getOuterBindingIdentifiers.js133271587047465259 0
@@ -14014,19 +14015,20 @@
 59X:\react\New folder\reactcodes\node_modules\.bin\terser.cmd133238623719423172 0
 57X:\react\New folder\reactcodes\dist\index.63aff760.js.map133245451712883877 0
 58X:\react\New folder\reactcodes\dist\index.7e7fc923.css.map133244609051315657 0
-58X:\react\New folder\reactcodes\dist\index.9e4c6fd2.css.map133271851127688369 0
-46X:\react\New folder\reactcodes\dist\index.html133271851128498403 0
-53X:\react\New folder\reactcodes\dist\logo.40044551.jpg133271851127068366 0
-59X:\react\New folder\reactcodes\coverage\coverage-final.json133271850917359354 0
+58X:\react\New folder\reactcodes\dist\index.9e4c6fd2.css.map133271894712453649 0
+46X:\react\New folder\reactcodes\dist\index.html133271894714271067 0
+53X:\react\New folder\reactcodes\dist\logo.40044551.jpg133271894711983638 0
+59X:\react\New folder\reactcodes\coverage\coverage-final.json133271890801303559 0
 51X:\react\New folder\reactcodes\coverage\lcov-report133271805716569749 1
-60X:\react\New folder\reactcodes\coverage\lcov-report\base.css133271850917499362 0
-71X:\react\New folder\reactcodes\coverage\lcov-report\block-navigation.js133271850917509376 0
-62X:\react\New folder\reactcodes\coverage\lcov-report\index.html133271850917589636 0
-73X:\react\New folder\reactcodes\coverage\lcov-report\sort-arrow-sprite.png133271850917519391 0
-61X:\react\New folder\reactcodes\coverage\lcov-report\sorter.js133271850917519391 0
-63X:\react\New folder\reactcodes\coverage\lcov-report\sum.js.html133271800678606407 0
-57X:\react\New folder\reactcodes\coverage\lcov-report\utils133271805716589741 1
-68X:\react\New folder\reactcodes\coverage\lcov-report\utils\index.html133271850917669367 0
-77X:\react\New folder\reactcodes\coverage\lcov-report\components\Header.js.html133271850917649362 0
+60X:\react\New folder\reactcodes\coverage\lcov-report\base.css133271890802028417 0
+71X:\react\New folder\reactcodes\coverage\lcov-report\block-navigation.js133271890802153269 0
+62X:\react\New folder\reactcodes\coverage\lcov-report\index.html133271890802384811 0
+73X:\react\New folder\reactcodes\coverage\lcov-report\sort-arrow-sprite.png133271890802173282 0
+61X:\react\New folder\reactcodes\coverage\lcov-report\sorter.js133271890802263264 0
+63X:\react\New folder\reactcodes\coverage\lcov-report\sum.js.html133271857047399230 0
+57X:\react\New folder\reactcodes\coverage\lcov-report\utils133271857769283456 1
+68X:\react\New folder\reactcodes\coverage\lcov-report\utils\index.html133271890802464840 0
+71X:\react\New folder\reactcodes\coverage\lcov-report\utils\Store.js.html133271890802474800 0
+77X:\react\New folder\reactcodes\coverage\lcov-report\components\Header.js.html133271890802425158 0
 71X:\react\New folder\reactcodes\coverage\lcov-report\components\__tests_133271805716559751 1
-82X:\react\New folder\reactcodes\coverage\lcov-report\components\__tests_\index.html133271850917659390 0
+82X:\react\New folder\reactcodes\coverage\lcov-report\components\__tests_\index.html133271890802434794 0
