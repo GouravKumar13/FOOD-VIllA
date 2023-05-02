@@ -7,17 +7,17 @@ import Body from "./components/Body";
 import LoginForm from "./components/LoginForm";
 import RestaurantDetails from "./components/RestaurantDetails";
 import Error from "./components/Error";
-import { Provider } from "react-redux";
-import Store from "./utils/Store";
+
+
 import Cart from "./components/Cart";
 
 
 const App = () => {
   return (
-    <Provider store = {Store}>
+    <>
       <Header />
       <Outlet />
-    </Provider>
+      </>
   );
 };
 export default App;

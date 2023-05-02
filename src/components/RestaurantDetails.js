@@ -4,7 +4,7 @@ import DoorDashFavorite from "./Shimmer";
 // import "./RestaurantDetails.scss";
 import { IMG_CDN_URL } from "../config";
 import { useDispatch } from "react-redux";
-import { addItem } from "../utils/CartSlice";
+import { addItem } from "../redux/ReduxSlices/CartSlice";
 
 const RestaurantDetails = () => {
 
@@ -29,7 +29,7 @@ const RestaurantDetails = () => {
   }, []);
 
   async function getRestaurantData() {
-    const data = await fetch(
+    try{const data = await fetch(
       `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6361186&lng=77.0888228&restaurantId=${id}&submitAction=ENTER`
     );
     const json = await data.json();
@@ -48,7 +48,8 @@ const RestaurantDetails = () => {
     // setRestaurantDetails(AllData);
     setRestaurant(AllData[0].card.card.info);
     setDiscount(DiscountDetails);
-    setCatogries(recommendedCatogrie);
+    setCatogries(recommendedCatogrie);}
+    catch( error){console.error();}
   }
  
   // if (!AllRestaurantDetails) return null;
@@ -88,8 +89,10 @@ const RestaurantDetails = () => {
             {catogries?.title}(<span>{catogries?.itemCards?.length}</span>)
           </h2>
 
-          {Object.values(catogries?.itemCards).map((dish) => {
+          {typeof(catogries)==="undefined"?<DoorDashFavorite />:(Object.values(catogries?.itemCards).map((dish) => {
+            console.log(dish)
             return (
+              
               <div className="overflow-hidden flex gap-9 mb-1 border-b-2 border-dotted max-h-[300px]  border-y-gray-400 " key={dish?.card?.info?.id}>
                 <div className="  w-[50%]" >
                   <div className=" mb-5 text-lg font-semibold text-gray-700">{dish?.card?.info?.name}</div>
@@ -102,7 +105,7 @@ const RestaurantDetails = () => {
                 </div>
               </div>
             );
-          })}
+          }))}
         </div>
       </div>
     </div>

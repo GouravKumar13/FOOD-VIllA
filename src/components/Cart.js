@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { IMG_CDN_URL } from "../config";
-import {removeItems , clearCart} from "../utils/CartSlice"
+import {removeItems , clearCart} from "../redux/ReduxSlices/CartSlice"
 const Cart =()=>{
 
     const cartItems  = useSelector(Store => Store.cart.items);
-    console.log(cartItems);
+  
     dispatch = useDispatch()
     const handleRemoveItems = (dish) =>{
         dispatch(removeItems(dish))

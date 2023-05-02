@@ -1,5 +1,6 @@
 import React from "react";
 import RestaurantCard from "./RestaurantCard";
+import axios from "axios";
 // import "./Body.scss";
 
 import { useState, useEffect } from "react";
@@ -22,7 +23,7 @@ const Body = () => {
   }, []);
 
   async function getRestaurants() {
-    const data = await fetch(
+    try {const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6361186&lng=77.0888228&page_type=DESKTOP_WEB_LISTING"
     );
 
@@ -30,7 +31,8 @@ const Body = () => {
 
     //optionnal chaining
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    setFilterRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    setFilterRestaurants(json?.data?.cards[2]?.data?.data?.cards);}
+    catch(error){console.log(error);}
   }
   const isOnline = useOnline();
   if(!isOnline){
@@ -43,7 +45,7 @@ const Body = () => {
  
 
   return allRestaurants.length === 0 ? (
-    <div className="restaurant-list">
+    <div className="flex ">
       <DoorDashFavorite />
     </div>
   ) : (

@@ -1,22 +1,26 @@
 import React, { useState, useContext } from "react";
-// import "./Header.scss";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import { Link } from "react-router-dom";
-import userContext from "../utils/userContext";
+
 import { useSelector } from "react-redux";
 
 function Header() {
-  const { user } = useContext(userContext);
+  
   const cartItems = useSelector((Store) => Store.cart.items);
+  const id = useSelector((state) => state.userInfo[0].user);
+  console.log(id)
+  
 
   return (
-    <div className="bg-[#ff0099] wrapper flex gap-96  justify-center items-center mb-4">
-      <div className="logo w-20   " >
+    <div className="bg-[#5aa1ff] wrapper flex gap-96  justify-center items-center mb-4 p-5">
+      <div className="logo w-40   " >
         <Link to="/">
-          <img data-testid="Logo" src={require("../assets/logo.jpg")} />
+          <LocalDiningIcon sx={{ fontSize: 40 }}/>
         </Link>
       </div>
 
-      <div className="nav-items flex list-none gap-20   ">
+      <div className="nav-items flex list-none gap-20  text-white font-semibold text-base ">
         <li>Search</li>
 
         <li>
@@ -26,13 +30,13 @@ function Header() {
         <li>
           <Link to="/contact"> Contact Us</Link>
         </li>
-
         <li>
-          <Link to="/loginForm">{user.id}</Link>
+          <Link to="/Cart" className="absolute"><ShoppingCartIcon sx={{ color: "white" }} /><span className="text-white font-bold bg-slate-900 rounded-full relative right-2 bottom-2" >{cartItems.length}</span></Link>
         </li>
         <li>
-          <Link to="/Cart">cart-{cartItems.length}</Link>
+          <Link to="/loginForm">{id}</Link>
         </li>
+       
       </div>
     </div>
   );

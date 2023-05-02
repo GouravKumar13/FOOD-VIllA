@@ -1,39 +1,46 @@
-import { useContext, useState } from "react";
-import userContext from "../utils/userContext";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { login } from "/src/redux/ReduxSlices/UserSlice";
 const LoginForm = () => {
-  const [isUser, setIsUser] = useState({
-    id: `gourav`,
-    email: `gourav@gmail.com`,
-  })
+  const [User, setUser] = useState("");
+  const [email, setEmail] = useState("");
+ 
+ 
+ const dispatch = useDispatch();
+ const onlogin = ()=>{
+  dispatch(login({
+   user: User}
+  ))
+ }
   
   
   return (
     <div className="flex flex-col justify-center  w-full items-center border ">
-      <userContext.Provider value={{user :isUser, }}>
-        <input
-          onChange={(e) =>
-            setIsUser({  
-              ...isUser,
-              id: e.target.value,
-            })
-          }
-          type="text"
-          placeholder="user name"
-        />
-        
-        <input
-          onChange={(e) =>
-            setIsUser({
-              ...isUser,
-              email: e.target.value,
-            })
-          }
-          type="email"
-          placeholder="@gmial.com"
-        />
-      </userContext.Provider>
+    
+      <input
+        onChange={(e) =>
+          setUser({
+            user: e.target.value,
+          })
+        }
+        type="text"
+        placeholder="User Name"
+      />
+
+      <input
+        onChange={(e) =>
+          setEmail({
+            email: e.target.value,
+          })
+        }
+        type="email"
+        placeholder="@gmial.com"
+      />
+      <button onClick={onlogin} className="bg-blue-500">
+        LogIN
+      </button>
     </div>
   );
-};
+      }
 
 export default LoginForm;
