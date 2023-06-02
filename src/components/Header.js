@@ -21,7 +21,7 @@ function Header() {
       </div>
 
       <div className="nav-items flex list-none gap-20  text-white font-semibold text-base ">
-        <li>Search</li>
+       
 
         <li>
           <Link to="/About">About</Link>
