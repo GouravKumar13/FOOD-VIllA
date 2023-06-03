@@ -5,7 +5,7 @@ import Contact from "./components/Contact";
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import Body from "./components/Body";
 import LoginForm from "./components/LoginForm";
-import RestaurantDetails from "./components/RestaurantDetails";
+import RestaurantDetails from "./components/RestaurantDetails/RestaurantDetails";
 import Error from "./components/Error";
 
 
