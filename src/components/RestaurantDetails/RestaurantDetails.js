@@ -45,7 +45,7 @@ const RestaurantDetails = () => {
       const data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.7040592&lng=77.10249019999999&restaurantId=${id}&submitAction=ENTER`
       );
       const json = await data.json();
-      console.log(json)
+      
       const AllData = Object.values(json.data.cards).map((card) => {
         return card;
       });
@@ -56,7 +56,7 @@ const RestaurantDetails = () => {
       });
 
 
-
+   setVisibleSection(1)
 
       // setRestaurantDetails(AllData);
       setRestaurant(AllData[0].card.card.info);
@@ -95,9 +95,9 @@ const RestaurantDetails = () => {
 
 
           { (catogries.map((dish, index) => {
-
+console.log(dish)
             return (
-
+             
               <div className=" w-full flex flex-col items-stretch m-auto" key={ dish?.card?.card?.type }>
                 <div className="">{ (dish?.card?.card?.title ? (
                   <div className=" m-auto mb-5 text-lg font-semibold text-gray-700">
@@ -111,7 +111,7 @@ const RestaurantDetails = () => {
                     <div>                   
                       { visibleSection === index ? (
                       dish?.card?.card?.itemCards?.map((item) => {
-                        console.log(item.card.info)
+                        
                         return (
                           <CategoryCard key={ item?.card?.info?.name } item={ item } handleAddItems={ handleAddItems } IMG_CDN_URL={ IMG_CDN_URL } />
                         )
