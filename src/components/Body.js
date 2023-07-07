@@ -20,7 +20,7 @@ const Body = () => {
   const [sortKey, setSortKey] = useState("RELEVANCE")
   const [filter, setFilter] = useState("");
   const [searchText, setSearchText] = useState("");
-  const [offset, setOffset] = useState(0)
+  const [offset, setOffset] = useState(1)
 
   useEffect(() => {
     window.addEventListener('scroll', infiniteScroll)
@@ -30,7 +30,7 @@ const Body = () => {
   const infiniteScroll = () => {
     if (window.innerHeight + document.documentElement.scrollTop + 2 > document.documentElement.offsetHeight) {
 
-      setOffset(prevOffset => prevOffset + 16)
+      setOffset(prevOffset => prevOffset + 15)
     }
   }
 
@@ -45,7 +45,7 @@ const Body = () => {
       
 
       setAllRestaurants(json?.data?.cards);
-      setFilterRestaurants(json?.data?.cards);
+      setFilterRestaurants(prevData=>[...prevData , ...json?.data?.cards]);
     }
     catch (error) { console.log(error); }
   }
