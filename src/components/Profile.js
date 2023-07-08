@@ -1,7 +1,7 @@
 import useProfile from "../utils/useProfile";
 // import "./Profile.scss"
 const Profile = () => {
-  userdata = useProfile();
+  const userdata = useProfile();
 
   return (
     <div className="wrapper">
