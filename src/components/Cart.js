@@ -5,7 +5,8 @@ const Cart =()=>{
 
     const cartItems  = useSelector(Store => Store.cart.items);
   
-    dispatch = useDispatch()
+    const dispatch = useDispatch()
+
     const handleRemoveItems = (dish) =>{
         dispatch(removeItems(dish))
 

@@ -45,7 +45,7 @@ const Body = () => {
       
 
       setAllRestaurants(json?.data?.cards);
-      setFilterRestaurants(prevData=>[...prevData , ...json?.data?.cards]);
+      setFilterRestaurants(json?.data?.cards);
     }
     catch (error) { console.log(error); }
   }
