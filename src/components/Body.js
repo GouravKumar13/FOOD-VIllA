@@ -43,7 +43,7 @@ const Body = () => {
 
   async function getNextPage () {
     try {
-      const data = await fetch(`https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&offset=${offset}&sortBy=${sortKey}&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING`)
+      const data = await fetch(`https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&offset=${offset}&sortBy=${sortKey}&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING`)
       const json = await data.json();
 
 
@@ -58,7 +58,13 @@ const Body = () => {
   }, []);
   async function getRestaurants () {
     try {
-      const data = await fetch(`https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&page_type=DESKTOP_WEB_LISTING`);
+      const data = await fetch(`https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940947&lng=85.1375645&page_type=DESKTOP_WEB_LISTING`,{
+        method: 'GET',
+        mode: 'cors',
+        headers:{
+          "Access-Control-Allow-Origin": "*"
+        },
+      });
 
       const json = await data.json();
 
