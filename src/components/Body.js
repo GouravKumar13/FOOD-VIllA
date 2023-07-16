@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { filterData } from "../utils/helper";
 import useOnline from "../utils/useOnline";
 import Search from "./Search";
+import Filter from "./filter/filter";
 
 
 
@@ -21,6 +22,8 @@ const Body = () => {
   const [filter, setFilter] = useState("");
   const [searchText, setSearchText] = useState("");
   const [offset, setOffset] = useState(1)
+
+  const [filterActive, setFilterActive] = useState(false)
 
   useEffect(() => {
     window.addEventListener('scroll', infiniteScroll)
@@ -42,7 +45,7 @@ const Body = () => {
     try {
       const data = await fetch(`https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&offset=${offset}&sortBy=${sortKey}&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING`)
       const json = await data.json();
-      
+
 
       setAllRestaurants(json?.data?.cards);
       setFilterRestaurants(json?.data?.cards);
@@ -55,7 +58,7 @@ const Body = () => {
   }, []);
   async function getRestaurants () {
     try {
-      const data = await fetch(`https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&sortBy=RELEVENCE&page_type=DESKTOP_WEB_LISTING`);
+      const data = await fetch(`https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&page_type=DESKTOP_WEB_LISTING`);
 
       const json = await data.json();
 
@@ -70,10 +73,12 @@ const Body = () => {
   const isOnline = useOnline();
   if (!isOnline) {
     //add a image and make this page more attractive using updraw.co
-    return <h1>🔴 you are offline please connect to the internet</h1>
+    return <img src="../assets/undraw_going_offline_ihag.png" alt="You are offline please connect to the internet 🔴
+    " />;
   }
 
   if (!allRestaurants) return null;
+
 
 
 
@@ -86,11 +91,19 @@ const Body = () => {
         setFilterRestaurants(data);
         setSearchText("");
       } } />
-    
-      <div className="justify-end  flex gap-5 border-b-2 border-slate-400">
-        { sort.map((item) => <span className="active:text-blue-300  mr-4 text-sm cursor-pointer px-1" onClick={ () => setSortKey(item.key) } key={ item.key }>{ item.title }</span>) }
+      <div className=" flex justify-between border-b-2 border-slate-200">
+        <div>
+
+          <h1 onClick={ () => setFilterActive(!filterActive) } className="cursor-pointer">Filter</h1>
+          { filterActive && <Filter filter={filter} filterActive={filterActive} setFilterActive={setFilterActive} /> }
+
+
+        </div>
+        <div className="  flex  justify-end ">
+          { sort.map((item) => <span className="active:text-blue-300 visited:border-black focus:border-b-2 focus:border-black hover:text-black text-slate-500   mr-4 text-sm cursor-pointer px-1" onClick={ () => setSortKey(item.key) } key={ item.key }>{ item.title }</span>) }
+        </div>
       </div>
-      <div className=" flex  flex-wrap justify-between m-auto mt-10 w-[70rem]">
+      <div className=" flex  flex-wrap  m-auto mt-10 w-[70rem]">
 
         { (searchText.length > 0 && filterRestaurants.length === 0) ? (
           <h1>This Restaurant is not found</h1>

@@ -1,6 +1,9 @@
 import React from 'react'
 
 const CategoryCard = ({item,handleAddItems,IMG_CDN_URL}) => {
+
+
+  
   return (
     <div className="overflow-hidden w-[100%]  flex mb-1 border-b-2 border-dotted justify-between  border-y-gray-400 " >
                 <div className=" p-2 " >
