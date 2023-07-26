@@ -1,6 +1,7 @@
 import { red } from '@mui/material/colors'
 import React from 'react'
 import CloseIcon from '@mui/icons-material/Close';
+import Filterlist from './filterList';
 
 const Filter = ({ filter,setFilterActive ,filterActive}) => {
   const [Cuisines, setcuisines] = React.useState(filter[0])
@@ -32,26 +33,7 @@ const Filter = ({ filter,setFilterActive ,filterActive}) => {
 }
 
 
-const Filterlist = ({ item }) => {
 
-  return (
-    <div className='w-full '>
-      <h1 className=' font-semibold we'>{ item.title }</h1>
-      <div className='w-full max-h-96 flex flex-col justify-between flex-wrap   '>
-        {
-
-          Object.values(item.options).map((option) => {
-            return (
-              <span className='inline  text-sm'>
-                <label for={ option.option } >  <input type={ item.configType } id={ option.option } />{ option.option }</label>
-              </span>)
-          })
-        }
-      </div>
-
-    </div>
-  )
-}
 
 
 
