@@ -47,8 +47,8 @@ const Body = () => {
       const json = await data.json();
 
 
-      setAllRestaurants(json?.data?.cards);
-      setFilterRestaurants(json?.data?.cards);
+      setAllRestaurants(json?.data?.cards[5].card.card.gridElements.infoWithStyle.restaurants);
+      setFilterRestaurants(json?.data?.cards[5].card.card.gridElements.infoWithStyle.restaurants);
     }
     catch (error) { console.log(error); }
   }
@@ -58,19 +58,13 @@ const Body = () => {
   }, []);
   async function getRestaurants () {
     try {
-      const data = await fetch(`https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940947&lng=85.1375645&page_type=DESKTOP_WEB_LISTING`,{
-        method: 'GET',
-        mode: 'cors',
-        headers:{
-          "Access-Control-Allow-Origin": "*"
-        },
-      });
+      const data = await fetch(`https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940947&lng=85.1375645&page_type=DESKTOP_WEB_LISTING`);
 
       const json = await data.json();
 
 
-      setSort(json?.data?.sorts)
-      setFilter(json?.data?.filters)
+      setSort(json?.data?.cards[4]?.card.card.sortConfigs)
+      setFilter(json?.data?.cards[4]?.card.card.faceList)
       //optionnal chaining
 
     }
@@ -84,11 +78,7 @@ const Body = () => {
   }
 
   if (!allRestaurants) return null;
-
-
-
-
-
+  if (!sort) return null;
   return (
 
     <>
@@ -101,7 +91,7 @@ const Body = () => {
         <div>
 
           <h1 onClick={ () => setFilterActive(!filterActive) } className="cursor-pointer">Filter</h1>
-          { filterActive && <Filter filter={filter} filterActive={filterActive} setFilterActive={setFilterActive} /> }
+          { filterActive && <Filter filter={ filter } filterActive={ filterActive } setFilterActive={ setFilterActive } /> }
 
 
         </div>
@@ -120,9 +110,9 @@ const Body = () => {
 
             return (
 
-              <Link to={ "restaurant/" + restaurant.data.data.id } key={ restaurant.data.data.id } >
+              <Link to={ "restaurant/" + restaurant.info.id } key={ restaurant.info.id } >
 
-                <RestaurantCard  { ...restaurant.data.data } />
+                <RestaurantCard  { ...restaurant.info } />
               </Link>
             );
           })
