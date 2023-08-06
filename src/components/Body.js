@@ -78,7 +78,7 @@ const Body = () => {
   }
 
   if (!allRestaurants) return null;
-  if (!sort) return null;
+  if (sort === undefined) return <h1 className="">Please reload</h1>;
   return (
 
     <>
