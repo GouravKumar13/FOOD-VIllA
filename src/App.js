@@ -7,9 +7,8 @@ import Body from "./components/Body";
 import LoginForm from "./components/LoginForm";
 import RestaurantDetails from "./components/RestaurantDetails/RestaurantDetails";
 import Error from "./components/Error";
-
-
 import Cart from "./components/Cart";
+import Footer from "./components/Footer";
 
 
 const App = () => {
@@ -17,8 +16,9 @@ const App = () => {
     <>
       <Header />
       <Outlet />
-      </>
-  );
+      <Footer />
+    </>)
+
 };
 export default App;
 export const AppRoute = createBrowserRouter([
@@ -32,7 +32,7 @@ export const AppRoute = createBrowserRouter([
       { path: "/contact", element: <Contact /> },
       { path: "/restaurant/:id", element: <RestaurantDetails /> },
       { path: "/loginForm", element: <LoginForm /> },
-      {path:"/Cart",element:<Cart/>}
+      { path: "/Cart", element: <Cart /> }
     ],
   },
 ]);
